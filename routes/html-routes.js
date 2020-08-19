@@ -31,9 +31,7 @@ module.exports = function(app) {
 
         api_helper.api_get('http://localhost:8080/api/bookmark').then(response => {
             console.log(response)
-
             let newCategory = _.groupBy(response, 'category')
-            const categories = Object.keys(newCategory)
             // res.render('members', Object.keys(newCategory).forEach(category => {
             //     $('.category-div').append(`h3= ${category.category}`)
             //     $('.bookmark-div').append(`a(href=${category.url} target='_blank')= ${category.url}`)
@@ -41,7 +39,6 @@ module.exports = function(app) {
             // }))
              res.render('members',{
                 bookmarks: newCategory,
-                categories: categories
             })
         }).catch(error => {
             res.send(error)

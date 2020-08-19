@@ -52,18 +52,18 @@ html
             //- -const bookmarks = bookmarks 
             //- .category-div
             //-     .bookmark-div
-            //- -console.log(bookmarks)
+            -console.log(bookmarks)
             
-            each category in categories
+            each bookmark in bookmarks
+                - let i = 0
                 .category-div
-                    h3= category
-                    //-  -console.log(bookmark.category)
-                    each bookmark in bookmarks[category]
-                        .bookmark-div
-                            button.delete-button(data-id= bookmark.id) &times;
-                            //- - console.log(bookmark.id)
-                            a(href= bookmark.url target='_blank')= bookmark.url
-                            button.keyword= bookmark.keyword
+                    h3= bookmark[i].category
+                     -console.log(bookmark.category)
+                    .bookmark-div
+                        button.delete-button(data-id= bookmark[i].id) &times;
+                        - console.log(bookmark[i].id)
+                        a(href= bookmark[i].url target='_blank')= bookmark[i].url
+                        button.keyword= bookmark[i].keyword
         //- footer 
         .footer 
             h4 &copy; Clever Foxes
