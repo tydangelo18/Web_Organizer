@@ -17,6 +17,9 @@
    - Input your desired Category, Keyword, and URL
 4. Get Organized!
 
+### Deployed Application
+View the application in action on Heroku [here](https://young-citadel-39306.herokuapp.com/).
+
 ### Technologies Used
 1. Pug Template Engine
 2. CSS

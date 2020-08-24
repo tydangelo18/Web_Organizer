@@ -44,8 +44,8 @@ $(document).ready(function() {
           data: newBookmark
         }).then(
           function(response) {
-            console.log("congrats! you've added a new bookmark");
-            console.log("inside ajax:", response)
+            // console.log("congrats! you've added a new bookmark");
+            // console.log("inside ajax:", response)
             // Reload the page to get the updated list
             location.reload();
           }
@@ -63,7 +63,7 @@ $(document).ready(function() {
             method: "DELETE"
         }).then(
             function() {
-              console.log("deleted bookmark", id);
+            //   console.log("deleted bookmark", id);
               // Reload the page to get the updated list
               location.reload();
             }
@@ -77,14 +77,14 @@ $(document).ready(function() {
   
       let category = $(this).attr("data-id")
 
-      console.log(category)
+    //   console.log(category)
       // Send the POST request.
       $.ajax('/api/bookmark/' + category, {
         type: 'GET',
         data: category
       }).then(
         function() {
-          console.log('you are viewing', category);
+        //   console.log('you are viewing', category);
           // Reload the page to get the updated list
           window.location.replace('/category');
         }

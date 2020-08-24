@@ -7,7 +7,7 @@ router.get("/users", function(req, res) {
       const pugObject = {
         user: data
       };
-      console.log(pugObject);
+    //   console.log(pugObject);
       res.render("index", pugObject);
     });
   });

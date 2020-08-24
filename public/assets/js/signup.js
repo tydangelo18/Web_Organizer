@@ -9,7 +9,8 @@ $('.signup').on('submit', function(event) {
     // Send the POST request.
     $.ajax('/api/users', {
       type: 'POST',
-      data: {email:name, password:password}
+      data: {email:name, password:password},
+      credentials: "include"
     }).then(
       function() {
         console.log('created new user');

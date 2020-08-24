@@ -1,23 +1,13 @@
 {
     "development": {
-        "username": "fy296k7e3a6neqbn",
-        "password": "u16gz6hn8i1vu758",
-        "database": "g4qi56ypojudfepi",
-        "host":     "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "username": "root",
+        "password": "process.env.DB_PASSWORD",
+        "database": "process.env.DB_NAME",
+        "host":     "127.0.0.1",
         "dialect":  "mysql"
       },
-      "test": {
-        "username": "fy296k7e3a6neqbn",
-        "password": "u16gz6hn8i1vu758",
-        "database": "g4qi56ypojudfepi",
-        "host": "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-        "dialect": "mysql"
-      },
       "production": {
-        "username": "fy296k7e3a6neqbn",
-        "password": "u16gz6hn8i1vu758",
-        "database": "g4qi56ypojudfepi",
-        "host":     "rnr56s6e2uk326pj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "use_env_variable": "JAWS_URL",
         "dialect":  "mysql"
       }
     }

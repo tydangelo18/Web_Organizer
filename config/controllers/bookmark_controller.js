@@ -10,7 +10,7 @@ router.get("/members", function(req, res) {
     const pugObject = {
       bookmark: data
     };
-    console.log(pugObject);
+    // console.log(pugObject);
     //also changing index to members to render the members.pug page
     res.render("members", pugObject);
   });
