@@ -1,5 +1,4 @@
 const { Sequelize, DataTypes } = require ('sequelize');
-const sequelize = new Sequelize('mysql::memory');
 
 module.exports =  function(sequelize,DataTypes) {
     //* Bookmark Model -- NOTE: createdAt and updatedAt are automatically added to every sequelize Model

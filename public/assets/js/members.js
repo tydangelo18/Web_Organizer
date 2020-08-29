@@ -5,13 +5,5 @@ $(document).ready(function() {
     // should be on server side
     $.get("/api/user_data").then(function(data) {
       $(".member-name").text(data.email);
-      
     });
- 
-      
-
-    
-
-
-     
 });

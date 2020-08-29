@@ -1,7 +1,7 @@
 const db = require('../models');
 
 module.exports = function(app) {
-//* GET route for getting all of the bookmarks
+    //* GET route for getting all of the bookmarks
     app.get('/api/bookmark', function(req, res) {
         
         const testKey = Object.keys(req.sessionStore.sessions)[0]
@@ -25,7 +25,7 @@ module.exports = function(app) {
         });
     });
 
-    //* Get route for retrieving a single post
+    //* Get route for retrieving a single post-- NOT USING
     app.get('/api/bookmark/:id', function(req, res) {
         // Here we add an "include" property to our options in our findOne query
         // We set the value to an array of the models we want to include in a left outer join
@@ -40,12 +40,14 @@ module.exports = function(app) {
         });
     });
     
+    //* GET rout to get all bookmarks within a specific category.
     app.get('/api/bookmark/:category', function(req, res) {
-        db.Bookmark.findOne({
+
+        db.Bookmark.findAll({
             where: {
                 category: req.params.category
             }, 
-            include: [db.User]
+            // include: [db.User]
         }).then(function(dbCategory) {
             res.json(dbCategory)
         });
