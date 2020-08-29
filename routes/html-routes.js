@@ -30,12 +30,7 @@ module.exports = function(app) {
     app.get('/members', function(req, res){
 
         api_helper.api_get('http://localhost:8080/api/bookmark').then(response => {
-<<<<<<< HEAD
-            console.log(response)
-=======
-            // console.log(response)
 
->>>>>>> 8c7cf1be891c4584b9a8c0388b1e57818ff7a8db
             let newCategory = _.groupBy(response, 'category')
             // res.render('members', Object.keys(newCategory).forEach(category => {
             //     $('.category-div').append(`h3= ${category.category}`)
