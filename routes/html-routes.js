@@ -59,7 +59,6 @@ module.exports = function (app) {
 		const testObj = JSON.parse(testVals);
         // const category = '';
 
-<<<<<<< HEAD
         api_helper.api_get('http://localhost:8080/api/bookmark').then(response => {
 
             let newCategory = _.groupBy(response, 'category')
@@ -74,28 +73,6 @@ module.exports = function (app) {
         }).catch(error => {
             res.send(error)
         })
-=======
-		db.Bookmark.findAll({
-			where: {
-				UserId: testObj.passport.user.id,
-				Category: '',
-			},
-			include: [db.User],
-		})
-			.then((response) => {
-				// console.log(response)
-
-				let newCategory = _.groupBy(response, 'category');
-				const categories = Object.keys(newCategory);
-				res.render('members', {
-					bookmarks: newCategory,
-					categories: categories,
-				});
-			})
-			.catch((error) => {
-				res.send(error);
-			});
->>>>>>> 7d2c547517edf2ffe7d15c5f89d8b032b2431e2a
     });
 
 	// app.get('/category', function (req, res) {
